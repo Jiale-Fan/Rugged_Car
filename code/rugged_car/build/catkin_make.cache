@@ -1,0 +1,2 @@
+basic_teleop
+-DCATKIN_DEVEL_PREFIX=/home/edward/Desktop/code/rugged_car/devel -DCMAKE_INSTALL_PREFIX=/home/edward/Desktop/code/rugged_car/install -G Unix Makefiles

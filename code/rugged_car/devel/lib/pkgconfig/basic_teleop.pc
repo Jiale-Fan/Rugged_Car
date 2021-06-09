@@ -1,0 +1,8 @@
+prefix=/home/edward/Desktop/code/rugged_car/devel
+
+Name: basic_teleop
+Description: Description of basic_teleop
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
