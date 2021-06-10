@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-motor_pin = 3 
+motor_pin = 12 
 counter = 0 
 
 def my_callback(channel):  # 边缘检测回调函数，详情在参见链接中

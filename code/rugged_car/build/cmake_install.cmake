@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/edward/Desktop/code/rugged_car/build/gtest/cmake_install.cmake")
   include("/home/edward/Desktop/code/rugged_car/build/basic_teleop/cmake_install.cmake")
+  include("/home/edward/Desktop/code/rugged_car/build/rugged_car_basics/cmake_install.cmake")
 
 endif()
 

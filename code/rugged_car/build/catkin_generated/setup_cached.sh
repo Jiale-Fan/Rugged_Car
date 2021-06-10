@@ -9,6 +9,7 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/edward/Desktop/code/rugged_car/devel:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/home/edward/Desktop/code/rugged_car/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/edward/Desktop/code/rugged_car/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/edward/Desktop/code/rugged_car/build'
 export ROSLISP_PACKAGE_DIRECTORIES='/home/edward/Desktop/code/rugged_car/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/edward/Desktop/code/rugged_car/src:$ROS_PACKAGE_PATH"

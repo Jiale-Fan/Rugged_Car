@@ -15,9 +15,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin/catkin_generated/version/package.cmake"
   "catkin_generated/installspace/_setup_util.py"
   "catkin_generated/order_packages.cmake"
+  "rugged_car_basics/catkin_generated/ordered_paths.cmake"
+  "rugged_car_basics/catkin_generated/package.cmake"
   "/home/edward/Desktop/code/rugged_car/src/CMakeLists.txt"
   "/home/edward/Desktop/code/rugged_car/src/basic_teleop/CMakeLists.txt"
   "/home/edward/Desktop/code/rugged_car/src/basic_teleop/package.xml"
+  "/home/edward/Desktop/code/rugged_car/src/rugged_car_basics/CMakeLists.txt"
+  "/home/edward/Desktop/code/rugged_car/src/rugged_car_basics/package.xml"
   "/opt/ros/noetic/share/catkin/cmake/all.cmake"
   "/opt/ros/noetic/share/catkin/cmake/assert.cmake"
   "/opt/ros/noetic/share/catkin/cmake/atomic_configure_file.cmake"
@@ -180,6 +184,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "basic_teleop/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "rugged_car_basics/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
