@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/edward/aerial_robot_ws/devel/include/**",
+        "/home/edward/anno/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/edward/aerial_robot_ws/src/Utils/pose_utils/include/**",
+        "/home/edward/anno/src/probot_anno/probot_anno_ikfast_manipulator_plugin/include/**",
+        "/home/edward/anno/src/probot_anno/probot_gazebo/include/**",
+        "/home/edward/aerial_robot_ws/src/Utils/quadrotor_msgs/include/**",
+        "/home/edward/racecar_simulator/src/racecar_simulator/include/**",
+        "/home/edward/aerial_robot_ws/src/so3_control/include/**",
+        "/home/edward/aerial_robot_ws/src/so3_quadrotor_simulator/include/**",
+        "/home/edward/aerial_robot_ws/src/Utils/uav_utils/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

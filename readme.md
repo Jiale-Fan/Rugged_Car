@@ -2,35 +2,24 @@
 
 ## Progress
 
-### week 6
+### week 7
 
-- mounting plate打印
+- 下载运行了MIT racecar_simulator代码，往里整合了pure pursuit轨迹跟踪算法后在rviz里进行了仿真
 
-  根据尺寸先用SolidWorks画图并导出DWG文件，已交给淘宝制作中
+  仿真程序节点图：
 
-- 将程序使用的GPIO库从RPi.GPIO迁移到pigpio，enable ROS包的编写（原来的库无法用ROS控制）
+  ![image-20210617164113764](readme.assets/image-20210617164113764.png)
 
-- 编写了读取编码器信息的结点，输出电机速度（rpm）
+  ![Screenshot from 2021-06-17 16-28-04](readme.assets/Screenshot from 2021-06-17 16-28-04.png)
 
-- 编写了odometry节点，读取装在电机上的编码器信息和舵机角度命令，输出nav_msgs的Odom消息类型，即里程计估计的当前位姿
-
-- 初步建立了ROS包，建立了控制电机和舵机的节点和话题，优化了键盘的控制逻辑
-
-  ![Screenshot from 2021-06-10 19-26-58](readme.assets/Screenshot from 2021-06-10 19-26-58.png)
-
-- 针对电机的转速控制编写了基本的PID控制脚本
+- 购买了STM32板（周五会到），基本完成了底层控制部分代码（未调试）
 
 ## Plan
 
-- 将[阿克曼底盘信息](http://wiki.ros.org/ackermann_msgs)解算成舵机和电机控制信号
-
-  逻辑即里程计的逆逻辑，仅需完成传动比例的测量和代码编写
-
-- 调节电机的PID控制参数
-
-- 高层的选型和方向问题
-
-
+- 以STM32为下位机调好底层控制部分（对舵机的控制、对电机的转速反馈控制）
+- 实现上下位机之间的通讯部分
+- 了解阿克曼底盘赛车的路径规划部分，将路径规划算法整合进仿真包里
+- 将仿真代码迁移到实车，利用动捕系统测试其跟踪效果和精度
 
 ## Undetermined
 
@@ -40,6 +29,3 @@
 
   可能有用的仓库：https://github.com/ros-teleop/teleop_tools
   
-- 电机闭环控制
-
-  其实能做，已经写了原始的PID控制器，但是视后续规划的情况而定，如果规划可以输出电机转速再写
