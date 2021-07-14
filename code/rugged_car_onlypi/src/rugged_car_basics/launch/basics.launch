@@ -1,0 +1,9 @@
+<launch>
+
+    <node pkg="rugged_car_basics" type="servo_controller.py" name="servo" output="screen"/>
+
+    <node pkg="rugged_car_basics" type="motor_controller.py" name="motor" output="screen"/>
+    
+    <node pkg="rugged_car_basics" type="motor_feedback.py" name="feedback" output="screen"/>
+
+</launch>

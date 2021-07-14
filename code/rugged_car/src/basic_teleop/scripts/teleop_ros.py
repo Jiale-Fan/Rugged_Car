@@ -8,7 +8,7 @@ from std_msgs.msg import Float64MultiArray, Float64
 PIN_MOTOR_CW = 26
 PIN_MOTOR_PWM = 18
 PIN_SERVO_PULSE = 16
-key_set={'w', 'a', 's', 'd', 'p'}
+key_set={'w', 'a', 's', 'd'}
 steering_angle = 90
 
 def run_forward():
@@ -39,8 +39,9 @@ def on_press(key):
             steering_to_left()
         elif key.char == 'd':
             steering_to_right()
-        elif key.char == 'p':
-            exit(0)
+       #elif key.char == 'p':
+       #     exit(0)
+        
 
 
 def on_release(key):

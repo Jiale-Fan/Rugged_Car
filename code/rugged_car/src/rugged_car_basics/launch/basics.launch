@@ -1,9 +1,17 @@
+<!-- -*- mode: XML -*- -->
 <launch>
-
+    <param name="speed_to_erpm_gain" value="1" />
+    <param name="speed_to_erpm_offset" value="0" />
+    <param name="steering_angle_to_servo_gain" value="70.43" />
+    <param name="steering_angle_to_servo_offset" value="100.61" />
+    <param name="wheelbase" value="0.325" />
+    
     <node pkg="rugged_car_basics" type="servo_controller.py" name="servo" output="screen"/>
 
     <node pkg="rugged_car_basics" type="motor_controller.py" name="motor" output="screen"/>
     
     <node pkg="rugged_car_basics" type="motor_feedback.py" name="feedback" output="screen"/>
+    
+    <node pkg="rugged_car_basics" type="control_to_odom_node" name="control_to_odom_node" output="screen"/>
 
 </launch>
