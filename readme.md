@@ -2,16 +2,27 @@
 
 ## Progress
 
-### vacation week 1
+### vacation week 2
 
-- 以STM32为下位机调好了底层控制部分（对舵机的控制、对电机的转速反馈控制）
-- 实现了上下位机之间的通讯
+理论部分：
 
-#### minor
+- 阅读了Driving on Point Cloud，代码未开源，已经开始进行复现
+- 阅读了RSS论文TARE，下载了cmu的exploration development environment和TARE源代码，跑通了仿真
 
-- 参考代码中新增了F1 tenth参考代码包
+工程部分：
+
+- 安装了T265相机，通过其获得Odometry
+- 测试了小车线速度与电机转速比
+- 利用T265的反馈信息完成了Stanley Control的实物测试，效果良好
+- 将Stanley control整合进入了仿真环境
+
+Others:
+
+- 配置了用于控制robomaster小车的妙算环境，整理了相关代码
 
 ## Plan
 
-- 了解阿克曼底盘赛车的路径规划部分，将路径规划算法整合进仿真包里
-- 将仿真代码迁移到实车，利用动捕系统测试其跟踪效果和精度
+- 使robomaster小车可以在动捕反馈和地图已知情况下完成路径规划和轨迹跟踪（周二前）
+- 继续复现Driving on Point Cloud，完成其中的RRT、RRT*算法
+- 利用Logitech游戏手柄实现遥控操控小车功能，并且编写小车收到命令的优先级结构
+- 继续查找和阅读多机器人联合探索，尤其是地空联合探索论文

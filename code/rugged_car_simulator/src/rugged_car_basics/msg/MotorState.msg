@@ -1,0 +1,1 @@
+float64 speed                # motor electrical speed (revolutions per minute) 
