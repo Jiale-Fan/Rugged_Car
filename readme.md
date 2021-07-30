@@ -2,27 +2,24 @@
 
 ## Progress
 
-### vacation week 2
+### vacation week 3
 
 理论部分：
 
-- 阅读了Driving on Point Cloud，代码未开源，已经开始进行复现
-- 阅读了RSS论文TARE，下载了cmu的exploration development environment和TARE源代码，跑通了仿真
+- 精读了TARE论文
 
 工程部分：
 
-- 安装了T265相机，通过其获得Odometry
-- 测试了小车线速度与电机转速比
-- 利用T265的反馈信息完成了Stanley Control的实物测试，效果良好
-- 将Stanley control整合进入了仿真环境
+- 利用Logitech游戏手柄编写实现了遥控操控小车功能和手动自动控制切换功能
+- 将主控从树莓派替换为妙算，进行了相应软件配置和硬件修改，成功在妙算上复现了在树莓派上实现的手动控制和轨迹跟踪功能
+- 编写了Driving on point cloud中针对点云的RRT和RRT\*算法并进行了测试
 
 Others:
 
-- 配置了用于控制robomaster小车的妙算环境，整理了相关代码
+- 配置了robomaster小车可以在动捕反馈情况下读取包含路径信息的txt文档并跟踪其中的轨迹
 
 ## Plan
 
-- 使robomaster小车可以在动捕反馈和地图已知情况下完成路径规划和轨迹跟踪（周二前）
-- 继续复现Driving on Point Cloud，完成其中的RRT、RRT*算法
-- 利用Logitech游戏手柄实现遥控操控小车功能，并且编写小车收到命令的优先级结构
-- 继续查找和阅读多机器人联合探索，尤其是地空联合探索论文
+- 完成Driving on point cloud中的Terrain Assesement和Local Trajectory Optimation部分代码编写和测试
+- 配置并测试雷达，使ROS能从其获取点云信息
+- 尝试在实车上复现TARE论文

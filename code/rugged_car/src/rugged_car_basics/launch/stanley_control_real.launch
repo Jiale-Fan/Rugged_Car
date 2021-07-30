@@ -1,0 +1,13 @@
+<launch>
+  <!-- Listen to messages from joysticks: TODO -->
+  <!-- <node pkg="joy" name="joy_node" type="joy_node"/> -->
+
+  <!-- 在rviz中显示-->
+  <include file="$(find realsense2_camera)/launch/rs_t265.launch"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find realsense2_camera)/rviz/tracking.rviz" required="true" />  
+
+  <!-- Start the stanley control testing node -->
+  <node pkg="rugged_car_basics" type="mbot_linux_serial" name="mbot_linux_serial" output="screen" respawn="true"/>
+  <node pkg="rugged_car_basics" type="stanley_control" name="stanley_control" output="screen"/>
+  
+</launch>

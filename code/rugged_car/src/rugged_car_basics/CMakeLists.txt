@@ -7,6 +7,7 @@ project(rugged_car_basics)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
+find_package(Eigen3 REQUIRED)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
@@ -129,6 +130,8 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
+include_directories(${EIGEN3_INCLUDE_DIR})
+add_definitions(${EIGEN_DEFINITIONS})
 include_directories(
   include
   ${Boost_INCLUDE_DIRS}
@@ -136,10 +139,16 @@ include_directories(
 )
 
 ## Declare a C++ library
+#file(GLOB SRC_FILES src/*.cpp)
 add_library(${PROJECT_NAME}
-  include/${PROJECT_NAME}/control_to_odom.h
   include/mbot_linux_serial.h
-  src/control_to_odom.cpp
+  include/cubic_spline_planner.h
+  include/stanley_control.h
+  #${SRC_FILES}
+  src/cubic_spline_planner.cpp
+  src/mbot_linux_serial.cpp
+  src/joy_control.cpp
+  #src/stanley_control.cpp
   #src/control_to_odom_node.cpp
   #src/mbot_linux_serial.cpp
 )
@@ -168,14 +177,26 @@ add_library(${PROJECT_NAME}
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
-add_executable(control_to_odom_node src/control_to_odom_node.cpp src/control_to_odom.cpp)
-add_executable(mbot_linux_serial src/mbot_linux_serial.cpp)
-add_dependencies(control_to_odom_node ${catkin_EXPORTED_TARGETS})
+
+add_executable(mbot_linux_serial src/serial_node.cpp src/mbot_linux_serial.cpp)
+# add_executable(stanley_control src/stanley_control.cpp src/cubic_spline_planner.cpp src/mbot_linux_serial.cpp)
+add_executable(stanley_control src/stanley_control.cpp src/cubic_spline_planner.cpp)
+add_executable(joy_control src/joy_control.cpp)
+#add_executable(cubic_spline_planner src/cubic_spline_planner.cpp)
+
+
 add_dependencies(mbot_linux_serial ${catkin_EXPORTED_TARGETS})
-target_link_libraries(control_to_odom_node
+add_dependencies(joy_control ${catkin_EXPORTED_TARGETS})
+
+
+
+target_link_libraries(mbot_linux_serial
   ${catkin_LIBRARIES}
 )
-target_link_libraries(mbot_linux_serial
+target_link_libraries(stanley_control
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(joy_control
   ${catkin_LIBRARIES}
 )
 

@@ -1,4 +1,25 @@
-# base_control
+## README
+
+## joystick control and tracking
+
+give the permission first:
+
+```
+sudo chmod 777 /dev/ttyUSB0
+```
+
+launch:
+
+```
+...
+roslaunch rugged_car_basics joystick_control.launch
+```
+
+this would launch joystick control node, stanley control node which would listen to path message, and realsense node.
+
+We use a logitech F710 joystick to control the car manually. Push X to change to manual control mode(default), push Y to switch to auto control.
+
+## base_control
 
 if you want to give the velocity and steering angle of the car,
 you should follow the steps below:
